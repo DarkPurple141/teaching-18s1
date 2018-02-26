@@ -47,10 +47,11 @@ export default {
    align-items: center;
    justify-content: center;
    width: 100%;
-   bottom: 0;
+   bottom: -1px;
    position: fixed;
    height: 120px;
-   background-color: @border;
+   background-color: #111;
+   color: @grey-light;
    line-height: 1.5;
 }
 
@@ -62,7 +63,7 @@ export default {
    margin: auto;
    padding: 10px;
    width: 50%;
-   border-right: 2px solid @accent;
+   border-right: 4px solid @accent;
 }
 
 .copyright {
@@ -81,11 +82,11 @@ a {
    justify-content: center;
    text-decoration: none;
    line-height: 1;
-   color: @icons;
+   color: inherit;
 }
 
 a:hover {
-   color: @icons-active;
+   color: @base-text;
 }
 
 @media screen and (max-width: 700px) {
@@ -97,7 +98,7 @@ a:hover {
    .footer-links {
       flex-direction: row;
       border-right: none;
-      border-bottom: 2px solid @accent;
+      border-bottom: 4px solid @accent;
    }
 }
 

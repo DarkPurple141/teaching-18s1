@@ -2,7 +2,7 @@
   <div id="app">
     <site-header/>
     <main>
-      <router-view></router-view>
+      <router-view :key="$route.path"></router-view>
     </main>
     <site-footer/>
   </div>
@@ -37,9 +37,13 @@ export default {
 }
 
 main {
+  max-width: 800px;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
   text-align: center;
   margin-top: 40px;
-  margin-bottom: 200px;
+  margin-bottom: 170px;
 }
 
 </style>

@@ -77,7 +77,7 @@ ul {
 
 li {
    padding: 10px;
-   margin: 0 10px;
+   margin: 0 5px;
    display: inline-block;
 }
 

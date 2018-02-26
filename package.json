@@ -50,6 +50,7 @@
     "karma-webpack": "^2.0.5",
     "less": "^3.0.1",
     "less-loader": "^4.0.5",
+    "marked": "^0.3.16",
     "mocha": "^4.0.1",
     "normalize.css": "^8.0.0",
     "opn": "^5.1.0",

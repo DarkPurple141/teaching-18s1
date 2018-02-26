@@ -1,20 +1,43 @@
 <template lang="html">
    <section class="content">
       <section-header :name="course"/>
+      <div v-for="cl in classes">
+         <router-link :to="{ name: 'Class', params: { class: cl.path } }">
+            {{ cl.name }}
+         </router-link>
+      </div>
       <article class="content-body">
-         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+         <p>{{ copy }}</p>
       </article>
    </section>
 </template>
 
 <script>
 import SectionHeader from '@/components/SectionHeader'
+import { getJSON, toCaps } from '@/helpers'
 
 export default {
    components: { SectionHeader },
    props: {
-      course: String,
-      required: true
+      course: {
+         type: String,
+         required: true
+      }
+   },
+
+   data() {
+      return {
+         classes: [],
+         copy: "I'll be putting anything worth announcing here. For class relevant labs and tute material click the above link."
+      }
+   },
+
+   beforeMount() {
+      console.log(`Getting /static/${this.course}/index.json`)
+      getJSON(`/static/${this.course}/index.json`)
+         .then(json => json.classes.forEach(
+            item => this.classes.push({ path: item, name: toCaps(item)})
+         ))
    }
 }
 </script>
