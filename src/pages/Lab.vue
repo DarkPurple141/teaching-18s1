@@ -30,7 +30,7 @@ export default {
    },
 
    beforeMount() {
-      getJSON(`/static/${this.course}/${this.cls}/${this.week}/index.json`)
+      getJSON(`static/${this.course}/${this.cls}/${this.week}/index.json`)
          .then((labJSON) => {
             labJSON.files.forEach(file => this.files.push(file))
             lab.meta = labJSON.meta
