@@ -71,7 +71,7 @@ a {
 }
 
 ul {
-   font-weight: bold;
+   font-weight: 600;
    list-style-type: none;
 }
 

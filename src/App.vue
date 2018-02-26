@@ -4,14 +4,16 @@
     <main>
       <router-view></router-view>
     </main>
+    <site-footer/>
   </div>
 </template>
 
 <script>
 import SiteHeader from '@/components/SiteHeader'
+import SiteFooter from '@/components/SiteFooter'
 
 export default {
-  components: { SiteHeader },
+  components: { SiteHeader, SiteFooter },
   name: 'Teaching'
 }
 </script>
@@ -37,6 +39,7 @@ export default {
 main {
   text-align: center;
   margin-top: 40px;
+  margin-bottom: 200px;
 }
 
 </style>

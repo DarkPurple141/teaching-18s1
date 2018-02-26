@@ -22,7 +22,6 @@ export default {
 @import '../assets/colors.less';
 
 .section-header {
-
    display: flex;
    align-items: center;
    justify-content: flex-start;
@@ -35,6 +34,12 @@ h1 {
    border-left: 10px solid @accent;
    padding: 30px;
    margin: auto 0;
+}
+
+@media screen and (max-width: 600px) {
+   h1 {
+      font-size: 44px;
+   }
 }
 
 </style>
