@@ -1,6 +1,6 @@
 <template lang="html">
    <div class="card">
-      <h3>Week {{ number + 1 }}</h3>
+      <h4>Week {{ number + 1 }}</h4>
       <p>{{ meta.description }}</p>
       <router-link :to="{ name: 'Lab', params: { week: this.link} }">More</router-link>
    </div>

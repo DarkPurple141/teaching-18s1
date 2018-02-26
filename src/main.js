@@ -7,6 +7,12 @@ import router from './router'
 import Icon from 'vue-awesome/components/Icon'
 import './icons'
 
+import 'prism-themes/themes/prism-atom-dark.css'
+//import 'prism-themes/themes/prism-duotone-light.css'
+import 'prismjs/components/prism-c.min.js'
+import 'prismjs/components/prism-yaml.min.js'
+import 'prismjs/components/prism-bash.min.js'
+
 Vue.component('icon', Icon)
 
 Vue.config.productionTip = false

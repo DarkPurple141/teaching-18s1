@@ -36,6 +36,12 @@ export default {
   line-height: 1;
 }
 
+h3 {
+   margin: 20px;
+   text-align: left;
+   color: @secondary-text;
+}
+
 main {
   max-width: 800px;
   width: 90%;

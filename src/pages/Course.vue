@@ -33,8 +33,7 @@ export default {
    },
 
    beforeMount() {
-      console.log(`Getting static/${this.course}/index.json`)
-      getJSON(`static/${this.course}/index.json`)
+      getJSON(`${this.course}/index.json`)
          .then(json => json.classes.forEach(
             item => this.classes.push({ path: item, name: toCaps(item)})
          ))

@@ -38,14 +38,14 @@ export default {
    },
 
    beforeMount() {
-      getJSON(`static/${this.course}/${this.cls}/index.json`)
+      getJSON(`${this.course}/${this.cls}/index.json`)
          .then(json => {
             json.weeks.forEach(week => this.labs.push({ path: week, meta: {} }))
             this.meta = json.meta
          })
          .then(() => {
             this.labs.forEach(lab => {
-               getJSON(`static/${this.course}/${this.cls}/${lab.path}/index.json`)
+               getJSON(`${this.course}/${this.cls}/${lab.path}/index.json`)
                   .then((labJSON) => {
                      lab.meta = labJSON.meta
                   })
@@ -62,12 +62,6 @@ export default {
    display: flex;
    flex-direction: row;
    flex-wrap: wrap;
-}
-
-h3 {
-   margin: 10px 0px;
-   text-align: left;
-   color: @secondary-text;
 }
 
 </style>

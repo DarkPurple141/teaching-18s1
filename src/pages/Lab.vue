@@ -1,11 +1,17 @@
 <template lang="html">
    <section class="labs">
-      <p v-for="file in files">{{ file }}</p>
+      <section-header :name="week"/>
+      <article v-for="file in files">
+         <h3>{{file.path}}</h3>
+         <pre><code class="language-c">{{ file.content }}</code></pre>
+      </article>
    </section>
 </template>
 
 <script>
-import { getJSON } from '@/helpers'
+import { getJSON, getFile } from '@/helpers'
+import SectionHeader from '@/components/SectionHeader'
+import Prism from 'prismjs'
 
 export default {
    props: {
@@ -23,6 +29,8 @@ export default {
       }
    },
 
+   components: { SectionHeader },
+
    data() {
       return {
          files: []
@@ -30,11 +38,24 @@ export default {
    },
 
    beforeMount() {
-      getJSON(`static/${this.course}/${this.cls}/${this.week}/index.json`)
+      getJSON(`${this.course}/${this.cls}/${this.week}/index.json`)
          .then((labJSON) => {
-            labJSON.files.forEach(file => this.files.push(file))
-            lab.meta = labJSON.meta
+            labJSON.files.forEach(file => this.files.push({ path: file, content: "" }))
          })
+         .then(() => {
+            this.files.forEach(file => {
+               getFile(`${this.course}/${this.cls}/${this.week}/${file.path}`)
+                  .then((content) => {
+                     file.content = content
+                  })
+            })
+         })
+   },
+
+   mounted() {
+      setTimeout(() => {
+         Prism.highlightAll()
+      }, 1000)
    }
 }
 </script>
