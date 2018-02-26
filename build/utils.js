@@ -22,9 +22,17 @@ exports.cssLoaders = function (options) {
     }
   }
 
+  const lessLoader = {
+    loader: 'less-loader',
+    options: {
+      minimize: process.env.NODE_ENV === 'production',
+      sourceMap: options.sourceMap
+    }
+  }
+
   // generate loader string to be used with extract text plugin
   function generateLoaders (loader, loaderOptions) {
-    const loaders = [cssLoader]
+    const loaders = [cssLoader, lessLoader]
     if (loader) {
       loaders.push({
         loader: loader + '-loader',
