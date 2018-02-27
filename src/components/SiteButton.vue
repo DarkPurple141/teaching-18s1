@@ -16,6 +16,10 @@ export default {
 <style scoped lang="less">
 @import '../assets/colors.less';
 
+.button:first-child {
+   margin-left: 20px;
+}
+
 .button {
    margin: 10px;
    min-width: 200px;
