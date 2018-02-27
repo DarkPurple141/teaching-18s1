@@ -60,5 +60,12 @@ export default {
 }
 </script>
 
-<style lang="less">
+<style lang="less" scoped>
+
+pre {
+   background-color: #1d1f21;
+   text-align: left;
+   transition: color 0.3s;
+}
+
 </style>
