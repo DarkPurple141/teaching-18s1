@@ -9,3 +9,14 @@ int main(void)
 
    return 0;
 }
+
+/*
+if (condition) {
+   a = 4
+} else {
+   a = 5
+}
+
+a = (condition) ? 4 : 5;
+
+*/
