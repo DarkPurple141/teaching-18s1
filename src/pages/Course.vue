@@ -1,10 +1,9 @@
 <template lang="html">
    <section class="content">
       <section-header :name="course"/>
-      <div v-for="cl in classes">
-         <router-link :to="{ name: 'Class', params: { class: cl.path } }">
-            {{ cl.name }}
-         </router-link>
+      <div class="button-container">
+            <site-button v-for="cl in classes"
+            :key="cl.path" :text="cl.name" :path="cl.path"/>
       </div>
       <article class="content-body">
          <p>{{ copy }}</p>
@@ -14,10 +13,12 @@
 
 <script>
 import SectionHeader from '@/components/SectionHeader'
+import SiteButton from '@/components/SiteButton'
+
 import { getJSON, toCaps } from '@/helpers'
 
 export default {
-   components: { SectionHeader },
+   components: { SectionHeader, SiteButton },
    props: {
       course: {
          type: String,
@@ -44,6 +45,12 @@ export default {
 <style lang="less" scoped>
 @import '../assets/colors.less';
 @import '../assets/article.less';
+
+.button-container {
+   display: flex;
+   flex-direction: row;
+   margin: 0 auto;
+}
 
 
 </style>

@@ -3,7 +3,8 @@
     "errors.c",
     "q2.c",
     "q3.c",
-    "x.c"
+    "x.c",
+    "getInt.c"
   ],
   "meta": {
     "name": "Week 1",
