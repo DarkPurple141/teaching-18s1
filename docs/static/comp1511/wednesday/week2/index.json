@@ -1,9 +1,11 @@
 {
   "files": [
-    "hello.c"
+    "if.c",
+    "rectangle.c",
+    "AndOr.c"
   ],
   "meta": {
-    "name": "Week 1",
-    "description": "Getting to know the C-Language."
+    "name": "Week 2",
+    "description": "Getting to know conditionals."
   }
 }

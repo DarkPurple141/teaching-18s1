@@ -1,7 +1,7 @@
 /*
 Written by John Shepherd, UNSW
 For COMP1521 18s1
-*/
+*/ 
 
 #define LIFE 42
 #define VAL  random()%20
