@@ -1,6 +1,6 @@
 {
   "files": [
-    "funcs.c",
+    "rectangle.c",
     "digits.c"
   ],
   "meta": {
