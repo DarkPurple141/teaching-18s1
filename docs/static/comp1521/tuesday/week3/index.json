@@ -1,12 +1,11 @@
 {
   "files": [
-    "errors.c",
-    "q2.c",
-    "q3.c",
-    "x.c"
+    "unicode.c",
+    "strcmp.c",
+    "union.c"
   ],
   "meta": {
-    "name": "Week 1",
-    "description": "Refresher on some C-syntax, compilers, and number representation."
+    "name": "Week 3",
+    "description": "Unicode, UTF-8, ASCII and bit representations"
   }
 }
