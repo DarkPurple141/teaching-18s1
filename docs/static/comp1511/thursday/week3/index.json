@@ -1,9 +1,7 @@
 {
   "files": [
-    "funcs.c",
-    "digits.c",
-    "cm2feet.c",
-    "review.c"
+    "rectangle.c",
+    "digits.c"
   ],
   "meta": {
     "name": "Week 3",
