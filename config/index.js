@@ -10,7 +10,7 @@ module.exports = {
     assetsRoot: path.resolve(__dirname, '../docs'),
     assetsSubDirectory: 'static',
     productionSourceMap: true,
-    assetsPublicPath: '/18s1/',
+    assetsPublicPath: '/',
     // Gzip off by default as many popular static hosts such as
     // Surge or Netlify already gzip all static assets for you.
     // Before setting to `true`, make sure to:
