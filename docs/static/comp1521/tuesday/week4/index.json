@@ -1,12 +1,11 @@
 {
   "files": [
-    "errors.c",
-    "q2.c",
-    "q3.c",
-    "x.c"
+    "loop.s",
+    "function.s",
+    "if.s"
   ],
   "meta": {
     "name": "Week 4",
-    "description": "Nothing to see here yet."
+    "description": "The beginnings of MIPS assembler."
   }
 }
