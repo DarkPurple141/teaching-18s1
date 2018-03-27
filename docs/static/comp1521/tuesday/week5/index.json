@@ -1,0 +1,10 @@
+{
+  "files": [
+    "danish.s",
+    "factor.s"
+  ],
+  "meta": {
+    "name": "Week 5",
+    "description": "More on MIPS."
+  }
+}

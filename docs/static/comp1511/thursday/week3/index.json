@@ -1,0 +1,10 @@
+{
+  "files": [
+    "cm2feet.c",
+    "funcs.c"
+  ],
+  "meta": {
+    "name": "Week 3",
+    "description": "Modulo and getting Func-y."
+  }
+}

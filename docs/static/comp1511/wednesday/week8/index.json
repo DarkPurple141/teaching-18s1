@@ -1,0 +1,9 @@
+{
+  "files": [
+    "hello.c"
+  ],
+  "meta": {
+    "name": "Week 1",
+    "description": "Getting to know the C-Language."
+  }
+}
