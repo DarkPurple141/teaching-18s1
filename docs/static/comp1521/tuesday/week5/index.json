@@ -1,12 +1,10 @@
 {
   "files": [
-    "errors.c",
-    "q2.c",
-    "q3.c",
-    "x.c"
+    "danish.s",
+    "factor.s"
   ],
   "meta": {
-    "name": "Week 1",
-    "description": "Refresher on some C-syntax, compilers, and number representation."
+    "name": "Week 5",
+    "description": "More on MIPS."
   }
 }
