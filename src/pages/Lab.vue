@@ -55,7 +55,7 @@ export default {
    mounted() {
       setTimeout(() => {
          Prism.highlightAll()
-      }, 1000)
+      }, 250)
    }
 }
 </script>
