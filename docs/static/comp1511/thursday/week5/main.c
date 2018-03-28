@@ -10,7 +10,7 @@ int main(int argc, char *argv[]) {
    printArray(originalArray, ARRAY_LENGTH);
 
    #ifdef MAP
-   multArray(originalArray, ARRAY_LENGTH);
+   squareArray(originalArray, ARRAY_LENGTH);
    printArray(originalArray, ARRAY_LENGTH);
    #endif
 
@@ -21,7 +21,7 @@ int main(int argc, char *argv[]) {
 
    #ifdef FILTER
    int filter[ARRAY_LENGTH];
-   int filter_length = filterArray(originalArray, ARRAY_LENGTH, filter);
+   int filter_length = filterArray(originalArray, ARRAY_LENGTH, filter, 5);
    printArray(filter, filter_length);
    #endif
 

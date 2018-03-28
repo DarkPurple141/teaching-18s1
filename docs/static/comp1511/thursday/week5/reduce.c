@@ -5,9 +5,9 @@
 int sumArray(int array[], int length) {
    int sum = 0;
    int i = 0;
+
    while (i < length) {
-      int current = array[i];
-      sum = sum + current;
+      sum = sum + array[i];
       i++;
    }
 

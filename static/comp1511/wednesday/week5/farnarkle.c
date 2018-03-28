@@ -6,7 +6,18 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-#include "farnarkle.h"
+//#include "farnarkle.h"
+#define N_TILES 4
+#define MAX_TILE 8
+#define MAX_TURNS 100
+
+// Don't change these functions
+int test_farnarkle_ai(int hidden_tiles[]);
+void print_two_tile_sequences(int tiles1[N_TILES], int tiles2[N_TILES]);
+void read_two_tile_sequences(int tiles1[N_TILES], int tiles2[N_TILES]);
+int read_tiles(int tiles[N_TILES]);
+void print_tiles(int tiles[N_TILES]);
+void set_tiles_to_pseudo_random_values(int tiles[N_TILES]);
 
 // ADD YOUR #defines (if any) here
 
@@ -63,21 +74,57 @@ int main(void) {
 }
 
 // return number of farnarkles
-int count_farnarkles(int tiles1[N_TILES], int tiles2[N_TILES]) {
+int count_farnarkles(int hidden[N_TILES], int guess[N_TILES]) {
 
-    // PUT YOUR CODE HERE
-    // NOTE DO NOT CHANGE tiles1 or tiles2
+    int count = 0;
+    int i     = 0;
 
-    return 0;
+    while (i < N_TILES) {
+       if (hidden[i] == guess[i]) {
+          count++;
+       }
+       i++;
+    }
+
+    return count;
 }
 
 // return number of arkles
-int count_arkles(int tiles1[N_TILES], int tiles2[N_TILES]) {
+int count_arkles(int hidden[N_TILES], int guess[N_TILES]) {
 
-    // PUT YOUR CODE HERE
-    // NOTE DO NOT CHANGE tiles1 or tiles2
+    int work[N_TILES] = {0};
+    int copy[N_TILES] = {0};
 
-    return 0;
+    int arkles = 0;
+    int i, j;
+
+    i = 0;
+    while (i < N_TILES) {
+       copy[i] = hidden[i];
+       if (hidden[i] != guess[i]) {
+          work[i] = guess[i];
+       } else {
+          copy[i] = -1;
+       }
+       i++;
+    }
+
+    i = 0;
+    while (i < N_TILES) {
+       j = 0;
+       int found = 0;
+       while (j < N_TILES && !found) {
+          if (copy[i] == work[j]) {
+             found = 1;
+             work[j] = 0;
+             arkles++;
+          }
+          j++;
+       }
+       i++;
+    }
+
+    return arkles;
 }
 
 // play_farnarkle is given a sequence hidden tiles

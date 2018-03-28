@@ -1,15 +1,16 @@
 #include "array.h"
 #include <stdio.h>
 
-/* multiply everything by 2 in array */
-void multArray(int array[], int length) {
+int sq(int a) {
+   return a*a;
+}
+
+/* multiply everything by itself in array */
+void squareArray(int array[], int length) {
    int i = 0;
 
    while (i < length) {
-      // array[i] = array[i] *2;
-      int current = array[i];
-      current = current * 2;
-      array[i] = current;
+      array[i] = sq(array[i]);
       i++;
    }
 }

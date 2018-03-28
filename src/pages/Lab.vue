@@ -33,7 +33,8 @@ export default {
 
    data() {
       return {
-         files: []
+         files: [],
+         update: false
       }
    },
 
@@ -55,7 +56,7 @@ export default {
    mounted() {
       setTimeout(() => {
          Prism.highlightAll()
-      }, 250)
+      }, 500)
    }
 }
 </script>

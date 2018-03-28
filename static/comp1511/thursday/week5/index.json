@@ -3,6 +3,8 @@
     "reduce.c",
     "map.c",
     "filter.c",
+    "everything.c",
+    "array.h",
     "example.c"
   ],
   "meta": {
