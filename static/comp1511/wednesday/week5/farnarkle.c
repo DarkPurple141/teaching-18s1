@@ -1,6 +1,6 @@
 // COMP1511 Farnarkling lab exercises
 //
-// This program by YOUR-NAME-HERE (z5555555) on INSERT-DATE-HERE
+// This program by ALEXANDER HINDS (z3420752) on 31.3.18
 
 #include <assert.h>
 #include <stdio.h>
@@ -144,12 +144,72 @@ void play_farnarkle(int hidden_tiles[N_TILES]) {
 // arkles: an array of turn - 1 arkle counts for previous guesses
 //
 // it should choose a suitable guess and store it in the array guess
+static void bucket_sort(int array[]) {
+   int i = 0;
+   int buckets[MAX_TILE + 1] = {0};
+
+   while (i < N_TILES) {
+      buckets[array[i]]++;
+      i++;
+   }
+   i = 0;
+   int j = 0;
+   while (i <= MAX_TILE && j < N_TILES) {
+      while (buckets[i]) {
+         array[j++] = i;
+         buckets[i]--;
+      }
+      i++;
+   }
+}
 
 void farnarkle_ai(int turn, int previous_guesses[MAX_TURNS][N_TILES],
                   int farnarkles[MAX_TURNS], int arkles[MAX_TURNS],
                   int guess[N_TILES]) {
+      int i = 0;
+      int j = 0;
+      int definite[MAX_TILE + 1] = {0};
+      int pool[N_TILES] = {0};
+      if (turn > 0) {
+         int numArkles = 0;
+         int numFarns  = 0;
+         /* detemine definites */
+         while (i < turn) {
+            numArkles = arkles[i];
+            numFarns  = farnarkles[i];
+            if (numFarns + numArkles == N_TILES) {
+               j = 0;
+               while (j < N_TILES) {
+                  definite[previous_guesses[i][j]]+=1;
+                  j++;
+               }
+            }
+            i++;
+         }
+         i = 1;
+         int j = 0;
+         while (i <= MAX_TILE) {
+            if (definite[i]) {
+               pool[j++] = i;
+            }
+            i++;
+         }
+         if (j) {
+            int i = 0;
+            while (i < j) {
+               guess[i] = pool[i];
+               i++;
+            }
+         } else {
+            set_tiles_to_pseudo_random_values(guess);
+         }
 
-    // PUT YOUR CODE HERE
+      } else {
+         while (i < N_TILES) {
+            guess[i] = 1;
+            i++;
+         }
+      }
 }
 
 // DO NOT CHANGE THE FUNCTIONS BELOW HERE
