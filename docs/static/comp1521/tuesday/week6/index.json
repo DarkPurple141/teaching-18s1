@@ -1,12 +1,11 @@
 {
   "files": [
-    "errors.c",
-    "q2.c",
-    "q3.c",
-    "x.c"
+    "graphics.c",
+    "read.c",
+    "write.c"
   ],
   "meta": {
-    "name": "Week 1",
-    "description": "Refresher on some C-syntax, compilers, and number representation."
+    "name": "Week 6",
+    "description": "File systems, open, read, write, stat."
   }
 }
