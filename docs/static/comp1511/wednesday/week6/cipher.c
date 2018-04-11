@@ -23,8 +23,9 @@ int isAlpha(char c) {
    return isUpperCase(c) || isLowerCase(c);
 }
 
-char accountForWrap(char toEncode, char end, int offset) {
+char accountForWrap(unsigned char toEncode, char end, int offset) {
    toEncode = toEncode + offset;
+
    if (toEncode > end) {
       toEncode = toEncode - LENGTH_OF_ALPHABET;
    }
