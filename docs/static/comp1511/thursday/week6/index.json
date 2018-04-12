@@ -1,7 +1,8 @@
 {
   "files": [
-    "confusing.c",
-    "caesar.c"
+    "getchar.c",
+    "cipher.c",
+    "confusing.c"
   ],
   "meta": {
     "name": "Week 6",
