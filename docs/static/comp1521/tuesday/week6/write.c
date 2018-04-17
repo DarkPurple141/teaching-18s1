@@ -14,16 +14,15 @@ typedef struct _graphics {
 
 int main(void)
 {
-   int pic = open("Picture", O_WRONLY | O_APPEND);
+   int pic = open("Picture", O_WRONLY | O_TRUNC | O_CREAT);
    if (pic < 0)
       perror("No Picture jeff.");
 
-   Graphics point = { 0, 0, 0, 0, 0 };
-
-   size_t gsize = sizeof(Graphics);
+   Graphics point;
 
    for (size_t i = 0; i < 5; i++) {
-      write(pic, &point, gsize);
+      point = { i, i, i, i, i };
+      write(pic, &point, sizeof(Graphics));
    }
 
    close(pic);

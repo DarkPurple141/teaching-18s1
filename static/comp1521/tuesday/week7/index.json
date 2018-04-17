@@ -1,12 +1,11 @@
 {
   "files": [
-    "errors.c",
-    "q2.c",
-    "q3.c",
-    "x.c"
+    "lseek.c",
+    "update_struct.c",
+    "write.c"
   ],
   "meta": {
-    "name": "Week 1",
-    "description": "Refresher on some C-syntax, compilers, and number representation."
+    "name": "Week 7",
+    "description": "More OS, and file stuff."
   }
 }
