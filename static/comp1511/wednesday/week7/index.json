@@ -1,9 +1,12 @@
 {
   "files": [
-    "hello.c"
+    "hello.c",
+    "lines.c",
+    "file.c",
+    "strings.c"
   ],
   "meta": {
-    "name": "Week 1",
-    "description": "Getting to know the C-Language."
+    "name": "Week 7",
+    "description": "File I/0, fputs, fgets, strings."
   }
 }
