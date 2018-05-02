@@ -1,12 +1,11 @@
 {
   "files": [
-    "errors.c",
-    "q2.c",
-    "q3.c",
-    "x.c"
+    "sock.c",
+    "fork.c",
+    "sig.c",
   ],
   "meta": {
-    "name": "Week 1",
+    "name": "Week 9",
     "description": "Refresher on some C-syntax, compilers, and number representation."
   }
 }

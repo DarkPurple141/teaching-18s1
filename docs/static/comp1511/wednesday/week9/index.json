@@ -1,9 +1,10 @@
 {
   "files": [
-    "hello.c"
+    "feedback.c",
+    "structs.c"
   ],
   "meta": {
-    "name": "Week 1",
-    "description": "Getting to know the C-Language."
+    "name": "Week 9",
+    "description": "Introducing structs, feedback on ASS1, intro to ASS2."
   }
 }
