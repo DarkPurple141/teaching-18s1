@@ -32,7 +32,13 @@ void run_unit_tests(void);
 
 
 // ADD PROTOTYPES FOR YOUR FUNCTIONS HERE
-void read_cards()
+int read_cards(int *array, int count) {
+   int counter = 0;
+   for (int i = 0; i < count; i++) {
+      counter += scanf("%d", &array[i]);
+   }
+   return counter;
+}
 
 
 // You should not need to change this main function
