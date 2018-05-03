@@ -1,0 +1,11 @@
+{
+  "files": [
+    "getchar.c",
+    "cipher.c",
+    "confusing.c"
+  ],
+  "meta": {
+    "name": "Week 6",
+    "description": "Unpacking confusing questions, Ciphers."
+  }
+}

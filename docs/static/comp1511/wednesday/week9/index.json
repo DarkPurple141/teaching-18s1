@@ -1,8 +1,7 @@
 {
   "files": [
     "feedback.c",
-    "structs.c",
-    "students.c"
+    "structs.c"
   ],
   "meta": {
     "name": "Week 9",

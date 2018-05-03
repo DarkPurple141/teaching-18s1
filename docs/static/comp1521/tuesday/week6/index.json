@@ -1,0 +1,11 @@
+{
+  "files": [
+    "graphics.c",
+    "read.c",
+    "write.c"
+  ],
+  "meta": {
+    "name": "Week 6",
+    "description": "File systems, open, read, write, stat."
+  }
+}

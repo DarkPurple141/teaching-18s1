@@ -1,0 +1,9 @@
+{
+  "files": [
+    "conditionals.c"
+  ],
+  "meta": {
+    "name": "Week 2",
+    "description": "If/Else Statements."
+  }
+}

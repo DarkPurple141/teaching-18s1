@@ -1,0 +1,10 @@
+{
+  "files": [
+    "square.c",
+    "loops.c"
+  ],
+  "meta": {
+    "name": "Week 4",
+    "description": "Loops and drawing things."
+  }
+}

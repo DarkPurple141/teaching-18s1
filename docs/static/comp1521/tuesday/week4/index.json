@@ -1,0 +1,11 @@
+{
+  "files": [
+    "loop.s",
+    "function.s",
+    "if.s"
+  ],
+  "meta": {
+    "name": "Week 4",
+    "description": "The beginnings of MIPS assembler."
+  }
+}

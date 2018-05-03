@@ -1,0 +1,14 @@
+{
+  "files": [
+    "reduce.c",
+    "map.c",
+    "filter.c",
+    "everything.c",
+    "array.c",
+    "example.c"
+  ],
+  "meta": {
+    "name": "Week 5",
+    "description": "Farnarkling, Arrays."
+  }
+}
