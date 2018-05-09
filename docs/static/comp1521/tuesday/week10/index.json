@@ -1,12 +1,10 @@
 {
   "files": [
-    "errors.c",
-    "q2.c",
-    "q3.c",
-    "x.c"
+    "sock.c",
+    "deadlock.c"
   ],
   "meta": {
-    "name": "Week 1",
-    "description": "Refresher on some C-syntax, compilers, and number representation."
+    "name": "Week 10",
+    "description": "Sockets, and Concurrency."
   }
 }
