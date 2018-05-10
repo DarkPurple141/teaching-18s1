@@ -1,0 +1,11 @@
+{
+  "files": [
+    "whales.c",
+    "list.c",
+    "test.c"
+  ],
+  "meta": {
+    "name": "Week 10",
+    "description": "Introduction to Linked Lists."
+  }
+}
