@@ -2,7 +2,8 @@
   "files": [
     "whales.c",
     "list.c",
-    "test.c"
+    "test.c",
+    "array.c"
   ],
   "meta": {
     "name": "Week 10",
