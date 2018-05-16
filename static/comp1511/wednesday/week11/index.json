@@ -1,0 +1,12 @@
+{
+  "files": [
+    "fruit_bot.c",
+    "fruit_bot.h",
+    "merge.c",
+    "mars_bars.c"
+  ],
+  "meta": {
+    "name": "Week 11",
+    "description": "Circular Linked Lists, Assignment 3."
+  }
+}
