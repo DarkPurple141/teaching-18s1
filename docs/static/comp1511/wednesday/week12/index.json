@@ -1,0 +1,11 @@
+{
+  "files": [
+    "list.c",
+    "lib.c",
+    "list.h"
+  ],
+  "meta": {
+    "name": "Week 12",
+    "description": "Linked lists, but more."
+  }
+}
