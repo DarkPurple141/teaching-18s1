@@ -160,28 +160,27 @@ everyKth:
    li    $t0, 0 # i = 0
    li    $v0, 0 # j = 0
 
-   start_for:
+start_for:
    beq   $t0, $a1, end
    rem   $t2, $t0, $a2
 
    bnez  $t2, end_for
-   mul   $t1, $t0, 4
-   add   $t1, $t1, $a0   # now at correct src address
-   lw    $t2, ($t1)
+   mul   $t1, $t0, 4     # get 4 byte offset ie index*4
+   add   $t1, $t1, $a0   # get address (ie add ptr+offset)
+   lw    $t2, ($t1)      # get the value for *src (deref)
 
    mul   $t3, $v0, 4
    add   $t3, $t3, $a3   # now at the correct dest address
-   # lw    $t3, ($t3)
 
-   sw    $t2, ($t3)
+   sw    $t2, ($t3)      # *dest[j] = src[i]
 
    addi  $v0, $v0, 1
 
-   end_for:
+end_for:
    addi  $t0, $t0, 1
    j     start_for
 
-   end:
+end:
    # epilogue
    # if you saved more than two $s? registers
    # add the code to restore them here

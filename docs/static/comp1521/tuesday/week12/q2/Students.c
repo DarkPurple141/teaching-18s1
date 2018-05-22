@@ -40,6 +40,16 @@ Students getStudents(int in)
 		return NULL;
 
 	assert(read(in, new->recs, bytes) == bytes);
+	/*
+	sturec_t temp;
+	int i = 0;
+	while (read(in, &temp, sizeof(sturec_t))) {
+		new->recs[i].id = temp.id;
+		new->recs[i].degree = temp.degree;
+		new->recs[i].wam = temp.wam;
+		i++;
+	}
+	*/
 
 	return new;
 }

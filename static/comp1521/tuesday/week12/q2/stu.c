@@ -28,5 +28,5 @@ int main(int argc, char *argv[])
 
 	// display student records
 	showStudents(ss);
-    return 0;
+   return 0;
 }

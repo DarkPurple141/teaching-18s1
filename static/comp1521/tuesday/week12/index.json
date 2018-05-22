@@ -1,7 +1,9 @@
 {
   "files": [
     "q1/q1.s",
-    "q2/Students.c"
+    "q2/Students.c",
+    "main.c",
+    "qsort.c"
   ],
   "meta": {
     "name": "Week 12",

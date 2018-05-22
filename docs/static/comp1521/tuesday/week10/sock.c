@@ -48,6 +48,7 @@ int main(int argc, char *argv[])
         fatal("ERROR connecting");
 
     char *reqFmt = "GET %s HTTP/1.1\r\nHost: www.cse.unsw.edu.au\r\n\r\n";
+    /*
     while (1) {
         printf("URL: ");
         if (fgets(url,199,stdin) == NULL)
@@ -67,6 +68,7 @@ int main(int argc, char *argv[])
             write(1, buffer, n);
         if (n < 0) fatal("ERROR reading from socket");
     }
+    */
 
     close(sockfd);
     return 0;
