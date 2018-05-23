@@ -73,12 +73,36 @@ Node list_append(Node curr, Node new) {
    return curr;
 }
 
+Node create_list(int len, int multiple) {
+   Node head = new_node(0);
+   for (int i = 1; i < len; i++) {
+      head = list_append(head, new_node(i * multiple));
+   }
+   return head;
+}
 
 void print_list(Node list) {
-   if (list) {
+   if (list) {    
       printf("[%d]->", list->data);
       print_list(list->next);
+     
    } else {
       printf("[X]\n");
    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
