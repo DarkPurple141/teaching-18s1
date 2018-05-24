@@ -2,7 +2,8 @@
   "files": [
     "list.c",
     "lib.c",
-    "list.h"
+    "list.h",
+    "recursion.c"
   ],
   "meta": {
     "name": "Week 12",

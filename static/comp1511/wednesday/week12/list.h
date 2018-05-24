@@ -15,3 +15,4 @@ Node strings_to_list(int len, char *strings[]);
 Node strings_to_list_recursive(int len, char *strings[]);
 void print_list(Node list);
 void delete_list(Node list);
+Node delete_list_contains(Node list, int data);

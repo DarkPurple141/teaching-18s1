@@ -22,6 +22,8 @@ int main(int argc, char *argv[]) {
    */
    Node list = strings_to_list_recursive(argc - 1, argv + 1);
    print_list(list);
+   list = delete_list_contains(list, 5);
+   print_list(list);
 
    return 0;
 }
@@ -59,15 +61,7 @@ Node strings_to_list_recursive(int len, char *strings[]) {
 	if (len > 0) {
 		new = new_node(atoi(*strings));
 		new->next = strings_to_list_recursive(len-1, strings + 1);
-	} 
+	}
 
    return new;
 }
-
-
-
-
-
-
-
-

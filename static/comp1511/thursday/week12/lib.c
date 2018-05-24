@@ -31,6 +31,14 @@ void run_tests(void) {
 
 }
 
+Node create_list(int len, int multiple) {
+   Node head = new_node(0);
+   for (int i = 1; i < len; i++) {
+      head = list_append(head, new_node(i * multiple));
+   }
+   return head;
+}
+
 void delete_list(Node list) {
    if (list) {
       delete_list(list->next);
@@ -72,7 +80,6 @@ Node list_append(Node curr, Node new) {
    }
    return curr;
 }
-
 
 void print_list(Node list) {
    if (list) {

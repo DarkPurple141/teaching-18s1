@@ -45,6 +45,19 @@ int contains(Node list, int data) {
    return 0;
 }
 
+Node delete_list_contains(Node curr, int data) {
+   if (curr) {
+      if (curr->data == data) {
+         Node temp = curr->next;
+         free(curr);
+         curr = temp;
+      } else {
+         curr->next = delete_list_contains(curr->next, data);
+      }
+   }
+   return curr;
+}
+
 int length(Node list) {
    if (list) {
       return 1 + length(list->next);
@@ -82,27 +95,11 @@ Node create_list(int len, int multiple) {
 }
 
 void print_list(Node list) {
-   if (list) {    
+   if (list) {
       printf("[%d]->", list->data);
       print_list(list->next);
-     
+
    } else {
       printf("[X]\n");
    }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
