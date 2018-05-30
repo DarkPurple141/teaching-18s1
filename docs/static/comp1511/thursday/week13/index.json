@@ -2,11 +2,10 @@
   "files": [
     "list.c",
     "lib.c",
-    "list.h",
-    "q2.c"
+    "list.h"
   ],
   "meta": {
     "name": "Week 13",
-    "description": "Linked lists, but more and more."
+    "description": "Linked lists, but more."
   }
 }
