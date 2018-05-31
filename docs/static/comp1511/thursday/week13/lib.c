@@ -6,23 +6,49 @@
 void run_tests(void) {
 
    printf("Beginning Tests\n");
-   Node head = new_node(0);
+   Node head = create_node(0);
    for (int i = 1; i < 5; i++) {
       assert(length(head) == i);
-      head = list_append(head, new_node(i));
+      head = list_append(head, create_node(i));
       assert(contains(head, i));
    }
    printf("\t-> basic tests passed\n");
 
-   delete_list(head);
+   free_list(head);
 
    printf("All tests done.\n");
 
 }
 
-void delete_list(Node list) {
+struct node *create_list(int values[], int size) {
+    int i = 0;
+
+    struct node *head = NULL;   // head of the linked list
+    struct node *tmp = NULL;    // temporary item we're working with
+    struct node *curr = NULL;   // current node we're looking at in the linked list
+
+    while (i < size) {
+        tmp = create_node(values[i]);
+
+        // link this node onto our list
+        if (head == NULL) {
+            // this is the first node in the list
+            head = tmp;
+            curr = head;
+        } else {
+            curr->next = tmp;
+
+            curr = tmp;
+        }
+        i++;
+    }
+
+    return head;
+}
+
+void free_list(Node list) {
    if (list) {
-      delete_list(list->next);
+      free_list(list->next);
       free(list);
    }
 }
@@ -54,7 +80,7 @@ int length(Node list) {
    return 0;
 }
 
-Node new_node(int data) {
+Node create_node(int data) {
    Node n = malloc(sizeof(struct node));
    if (!n) {
       fprintf(stderr, "Out of memory, exiting!\n");
@@ -74,14 +100,15 @@ Node list_append(Node curr, Node new) {
    }
    return curr;
 }
-
+/*
 Node create_list(int len, int multiple) {
-   Node head = new_node(0);
+   Node head = create_node(0);
    for (int i = 1; i < len; i++) {
-      head = list_append(head, new_node(i * multiple));
+      head = list_append(head, create_node(i * multiple));
    }
    return head;
 }
+*/
 
 Node merge_sorted(Node list1, Node list2) {
     if (list1 == NULL) {
