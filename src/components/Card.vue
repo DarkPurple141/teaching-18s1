@@ -21,14 +21,27 @@ export default {
 .card {
    margin: 20px 0px 20px 20px;
    width: 150px;
+   flex: 1 0 200px;
    display: flex;
-   height: 150px;
+   height: 200px;
    flex-direction: column;
    align-items: center;
-   justify-content: center;
-   border-left: 4px solid @accent;
+   justify-content: space-between;
+   border: 1px solid rgba(200, 200, 200, 0.5);
+   border-radius: 0.25em;
+   box-shadow: 2px 2px 5px 0px lighten(rgba(200, 200, 200, 0.5), 0.4);
+
    * {
+      width: 80%;
       padding: 10px;
+   }
+
+   h4 {
+      font-size: 1.25rem;
+      color: #efefef;
+      width: 100%;
+      background-color: @accent;
+      padding: 20px 0px;
    }
 }
 
